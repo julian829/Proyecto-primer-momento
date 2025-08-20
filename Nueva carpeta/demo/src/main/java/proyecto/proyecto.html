@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/demo/src/main/java/proyecto/estilos.css">
+</head>
+<body>
+    <div class="login-box">
+
+    <h2>Iniciar sesión</h2>
+
+    <form id="loginForm">
+
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Entrar</button>
+      <button type="reset" class="btn-secondary">Limpiar</button>
+
+    </form>
+
+      <script>
+   
+    let intentos = 3;
+
+    while (intentos > 0) {
+      let usuario = prompt("Ingrese usuario:");
+      let contrasena = prompt("Ingrese contraseña:");
+
+      if (usuario === "admin" && contrasena === "1234") {
+        alert("¡Bienvenido!");
+        break;
+      } else {
+        intentos = intentos - 1;
+        alert("Usuario o contraseña incorrectos. Te quedan " + intentos + " intento(s).");
+
+        if (intentos === 0) {
+          alert("Usuario bloqueado.");
+        }
+      }
+    }
+
+   
+
+  </script>
+
+  </div>
+
+    
+</body>
+</html>
+
+
